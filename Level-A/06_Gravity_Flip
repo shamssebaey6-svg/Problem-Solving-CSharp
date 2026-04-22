@@ -1,0 +1,15 @@
+namespace _06_Gravity_Flip
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int cols = int.Parse(Console.ReadLine());
+            int[] seperated_Spaces = Array.ConvertAll(Console.ReadLine().Split(),int.Parse);
+            Array.Sort(seperated_Spaces);
+            foreach (var x in seperated_Spaces)
+                Console.Write($"{x} ");
+            
+        }
+    }
+}
