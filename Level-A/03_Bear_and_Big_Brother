@@ -1,0 +1,23 @@
+mespace _03_Bear_and_Big_Brother
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] input = Console.ReadLine().Split();
+            int limakWeight = int.Parse(input[0]);
+            int bobWeight = int.Parse(input[1]);
+            int year = 0;
+
+            do
+            {
+                year++;
+                limakWeight *= 3;
+                bobWeight *= 2;
+            }
+            while (limakWeight <= bobWeight);
+
+            Console.WriteLine(year);
+        }
+    }
+}
