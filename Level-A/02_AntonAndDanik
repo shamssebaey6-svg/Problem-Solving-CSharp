@@ -1,0 +1,27 @@
+namespace _02_AntonAndDanik
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int number_Of_Games = int.Parse(Console.ReadLine());
+            string input_2 = Console.ReadLine();
+            int Anton = 0, Danik = 0;
+            char[] letters = input_2.ToCharArray();
+            foreach(var letter in letters)
+            {
+                if (letter == 'A')
+                    Anton++;
+                else
+                    Danik++;
+            }
+
+            if (Anton > Danik)
+                Console.WriteLine("Anton");
+            else if (Danik > Anton)
+                Console.WriteLine("Danik");
+            else
+                Console.WriteLine("Friendship");
+        }
+    }
+}
