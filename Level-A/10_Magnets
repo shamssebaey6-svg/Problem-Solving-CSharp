@@ -1,0 +1,22 @@
+namespace _10_Magnets
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = int.Parse(Console.ReadLine());
+            int n1, n2,count = 1;
+            n1 = int.Parse(Console.ReadLine());
+
+            for(int i=1; i<num; i++)
+            {
+                n2 = int.Parse(Console.ReadLine());
+                if (n1 != n2)
+                    count++;
+                n1 = n2;
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}
