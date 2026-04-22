@@ -1,0 +1,17 @@
+namespace _08_Boy_or_Girl
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] name = Console.ReadLine().ToCharArray();
+
+            int uniqueCount = name.Distinct().Count();
+
+            if (uniqueCount % 2 == 0)
+                Console.WriteLine("CHAT WITH HER!");
+            else
+                Console.WriteLine("IGNORE HIM!");
+        }
+    }
+}
