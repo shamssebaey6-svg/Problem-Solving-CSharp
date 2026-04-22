@@ -1,0 +1,20 @@
+namespace _04_Team
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int no_of_problems = int.Parse(Console.ReadLine());
+            int problemsCount = 0;
+            for(int i=0; i<no_of_problems; i++)
+            {
+                string[] sureProblems = Console.ReadLine().Split();
+                int sum = int.Parse(sureProblems[0]) + int.Parse(sureProblems[1]) + int.Parse(sureProblems[2]);
+                if (sum >= 2)
+                    problemsCount++;
+            }
+
+            Console.WriteLine(problemsCount);
+        }
+    }
+}
