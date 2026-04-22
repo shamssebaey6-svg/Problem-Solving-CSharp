@@ -1,0 +1,25 @@
+namespace _09_Word
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int upp = 0, low = 0;
+            string word = Console.ReadLine();
+            char[] chars = word.ToCharArray();
+            foreach(var x in chars)
+            {
+                if (char.IsLower(x))
+                    low++;
+                else
+                    upp++;
+            }
+
+            if (low >= upp)
+                Console.WriteLine(word.ToLower());
+            else
+                Console.WriteLine(word.ToUpper());
+
+        }
+    }
+}
