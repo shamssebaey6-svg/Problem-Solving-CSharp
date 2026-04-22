@@ -1,0 +1,31 @@
+namespace _05_Beautiful_Matrix
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int col = 0, row = 0;
+            for(int i=0;i<5; i++)
+            {
+                string[] input = Console.ReadLine().Split();
+                if(input.Contains("1"))
+                {
+                     row = i+1;
+
+                    for(int j=0; j<5; j++)
+                    {
+                        if (input[j] == "1")
+                        {
+                            col = j + 1;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+
+            int swaps = Math.Abs(row - 3) + Math.Abs(col - 3);
+            Console.WriteLine(swaps);
+        }
+    }
+}
