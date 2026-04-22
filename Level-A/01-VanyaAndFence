@@ -1,0 +1,26 @@
+namespace _01_VanyaAndFence
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] input_1 = Console.ReadLine().Split();
+
+            int personsNumber = int.Parse(input_1[0]);
+            int wallHeight = int.Parse(input_1[1]);
+            int width = 0;
+            string[] input_2 = Console.ReadLine().Split();
+
+            foreach (var x in input_2)
+            {
+                int PersonHeight = int.Parse(x);
+                if (PersonHeight > wallHeight)
+                    width += 2;
+                else
+                    width++;
+            }
+
+            Console.WriteLine($"{width}");
+        }
+    }
+}
